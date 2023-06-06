@@ -1,0 +1,87 @@
+source ~/_vimrc
+
+:nnoremap <c-o> :vsc View.NavigateBackward<CR>
+:nnoremap <c-i> :vsc View.NavigateForward<CR>
+
+:nnoremap <S-k> :vsc Window.NextTab<CR>
+:nnoremap <S-j> :vsc Window.PreviousTab<CR>
+
+"垂直分屏
+:nnoremap sv :vsp<CR>
+"水平分屏
+:nnoremap ss :sp<CR>
+
+"去定义
+:nnoremap gd <C-]>zz
+"nnoremap gd :grep <cword> **/*.*<CR>
+"查找所有引用--
+:nnoremap gr :vsc Edit.FindAllReferences<CR>
+
+
+"打开解决方案资源管理器
+:nnoremap cv :vsc View.SolutionExplorer<CR>
+
+
+"在文件中查找
+:nnoremap ck :vsc Edit.FindinFiles<CR>
+
+"打开文件所在文件夹
+:nnoremap cm :vsc File.OpenContainingFolder<CR>
+
+"快速查看方法定义 
+:nnoremap zj :vsc Edit.QuickInfo<CR>
+
+"快速查看方法的所有定义,鼠标在方法parameter上的时候显示的东西
+:nnoremap zk :vsc Edit.ParameterInfo<CR>
+
+"打开查找符号结果
+:nnoremap zs :vsc View.FindSymbolResults<CR>
+
+"打开查找结果1
+:nnoremap zi :vsc View.FindResults1<CR>
+
+"打开查找结果2
+:nnoremap zu :vsc View.FindResults2<CR>
+
+
+
+"可视模式中，使用 * 和 # 查找
+:vnoremap * "/y/<C-r>/<CR>
+:vnoremap # "/y?<C-r>/<CR>
+
+"打开折叠或者关闭折叠
+:nnoremap <space> za
+
+"Whole viewport jump-to-word beginning mode:
+:nnoremap <Space> gS:vsc Tools.InvokePeasyMotion<CR>
+
+"Select text from current caret position to desired jump label (fwd and reverse directions supported)
+":nnoremap ;; gS:vsc Tools.InvokePeasyMotionTextSelect<CR>
+
+"Jump to word beginning in current line
+:nnoremap zw gS:vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
+
+"Jump to word ending in current line
+:nnoremap ze gS:vsc Tools.InvokePeasyMotionLineJumpToWordEnding<CR>
+
+"Jump to any open document tab
+:nnoremap ;w gS:vsc Tools.InvokePeasyMotionJumpToDocumentTab<CR>
+
+"Jump to line beginning:
+nmap ;l gS:vsc Tools.InvokePeasyMotionJumpToLineBegining<CR>
+
+"Two char search mode:
+nmap ;c gS:vsc Tools.InvokePeasyMotionTwoCharJump<CR>
+
+""""""""""""""""""""""""""""""""""
+
+" 2.相关配置
+    "查看函数定义文档
+    :nnoremap zj :vsc Edit.QuickInfo<CR> 
+
+    "visual模式中的查找
+    :vnoremap * "/y/<C-r>/<CR>
+    :vnoremap # "/y?<C-r>/<CR>
+
+    "打开解决方案资源管理器
+    :nnoremap cv :vsc View.SolutionExplorer<CR>
